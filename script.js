@@ -38,3 +38,30 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+const projectBtn = document.getElementById("project-btn");
+const certificateBtn = document.getElementById("certificate-btn");
+const projectSection = document.getElementById("project-section");
+const certificateSection = document.getElementById("certificate-section");
+
+projectBtn.addEventListener("click", () => {
+  projectSection.classList.toggle("hidden");
+  certificateSection.classList.add("hidden");
+
+  if (!projectSection.classList.contains("hidden")) {
+    projectSection.classList.remove("animate-slide");
+    void projectSection.offsetWidth;
+    projectSection.classList.add("animate-slide");
+  }
+});
+
+certificateBtn.addEventListener("click", () => {
+  certificateSection.classList.toggle("hidden");
+  projectSection.classList.add("hidden");
+
+  if (!certificateSection.classList.contains("hidden")) {
+    certificateSection.classList.remove("animate-slide");
+    void certificateSection.offsetWidth;
+    certificateSection.classList.add("animate-slide");
+  }
+});
