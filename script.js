@@ -61,7 +61,7 @@ certificateBtn.addEventListener("click", () => {
 
   if (!certificateSection.classList.contains("hidden")) {
     certificateSection.classList.remove("animate-slide");
-    void certificateSection.offsetWidth;
+    void certificateSection.offsetWidth; 
     certificateSection.classList.add("animate-slide");
   }
 });
